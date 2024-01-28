@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <StyledComponentsRegistry>
         <body className={inter.className}>
-          <Navigation />
+          <header>
+            <Navigation />
+          </header>
           {children}
         </body>
         <GlobalStyles />

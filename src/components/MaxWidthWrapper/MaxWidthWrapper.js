@@ -6,7 +6,7 @@ function MaxWidthWrapper({ children, ...delegated }) {
 }
 
 const Wrapper = styled.div`
-  max-width: 1440px;
+  max-width: 1140px;
   padding: 0 24px;
   margin: 0 auto;
 `;

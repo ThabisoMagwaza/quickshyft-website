@@ -1,7 +1,9 @@
+import Hero from '@/components/Hero';
+
 export default function Home() {
   return (
     <main>
-      <h1>Welcome to QuickShyft</h1>
+      <Hero />
     </main>
   );
 }
