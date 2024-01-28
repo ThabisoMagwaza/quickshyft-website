@@ -37,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
     --color-accent-one-28: hsl(29deg, 76%, 28%);
 
     --color-white: hsl(0deg, 0%, 100%);
+    scroll-behavior: smooth;
   }
 
   body {
