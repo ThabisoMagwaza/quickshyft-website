@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { COLORS } from '@/lib/constants';
+import { COLORS, QUERIES } from '@/lib/constants';
 
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Heading1 from '../Heading1';
@@ -128,7 +128,10 @@ const Wrapper = styled(MaxWidthWrapper)`
   padding-bottom: 24px;
 
   max-width: 700px;
-  text-align: center;
+
+  @media ${QUERIES.mobileAndUp} {
+    text-align: center;
+  }
 `;
 
 const Text = styled.p`

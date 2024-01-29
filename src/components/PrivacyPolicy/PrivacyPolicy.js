@@ -110,6 +110,10 @@ const Wrapper = styled(MaxWidthWrapper)`
   padding-bottom: 24px;
   max-width: 700px;
   text-align: center;
+
+  @media ${QUERIES.mobileAndUp} {
+    text-align: center;
+  }
 `;
 
 const Text = styled.p`
