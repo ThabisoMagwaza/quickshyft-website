@@ -2,11 +2,11 @@
 import * as Tabs from '@radix-ui/react-tabs';
 import styled from 'styled-components';
 
-import { COLORS } from '@/lib/constants';
+import { COLORS, QUERIES } from '@/lib/constants';
 
 function FeatureTabs() {
   return (
-    <Tabs.Root defaultValue="hirer">
+    <Root defaultValue="hirer">
       <List>
         <Trigger value="hirer">Hirer</Trigger>
         <Trigger value="contractor">Contractor</Trigger>
@@ -81,18 +81,26 @@ function FeatureTabs() {
           </Step>
         </StepsList>
       </Content>
-    </Tabs.Root>
+    </Root>
   );
 }
+
+const Root = styled(Tabs.Root)`
+  max-width: 500px;
+`;
 
 const List = styled(Tabs.List)`
   display: flex;
   flex-direction: column;
   gap: 2px;
+
+  @media ${QUERIES.mobileAndUp} {
+    flex-direction: row;
+    gap: 0;
+  }
 `;
 
 const Trigger = styled(Tabs.Trigger)`
-  background: ${COLORS.White};
   border: none;
   border-bottom: 1px solid ${COLORS.Primary5};
   height: 60px;
@@ -117,6 +125,14 @@ const Trigger = styled(Tabs.Trigger)`
     width: 200px;
     background: ${COLORS.AccentOne28};
   }
+
+  @media ${QUERIES.mobileAndUp} {
+    flex: 1;
+
+    &[data-state='active']&::after {
+      width: auto;
+    }
+  }
 `;
 
 const Content = styled(Tabs.Content)`
@@ -137,6 +153,11 @@ const StepHeader = styled.header`
   margin-right: -24px;
 
   border-radius: 100px 0px 0px 100px;
+
+  @media ${QUERIES.mobileAndUp} {
+    background: unset;
+    margin-right: 0;
+  }
 `;
 
 const StepNumber = styled.span`
@@ -149,6 +170,10 @@ const StepNumber = styled.span`
 
   align-items: center;
   justify-content: center;
+
+  @media ${QUERIES.mobileAndUp} {
+    font-size: ${20 / 16}rem;
+  }
 `;
 
 const StepTitle = styled.h3`

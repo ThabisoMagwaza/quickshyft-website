@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { COLORS } from '@/lib/constants';
+import { COLORS, QUERIES } from '@/lib/constants';
 
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Heading2 from '../Heading2';
@@ -23,7 +23,13 @@ function Features() {
   );
 }
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  @media ${QUERIES.mobileAndUp} {
+    background: ${COLORS.Primary95};
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+`;
 
 const InnerWrapper = styled(MaxWidthWrapper)`
   text-align: center;
@@ -31,6 +37,12 @@ const InnerWrapper = styled(MaxWidthWrapper)`
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @media ${QUERIES.mobileAndUp} {
+    flex-direction: row;
+    text-align: start;
+    gap: 64px;
+  }
 `;
 
 const Column = styled.div``;

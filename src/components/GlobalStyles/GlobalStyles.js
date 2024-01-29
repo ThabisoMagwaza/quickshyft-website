@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
     --color-primary-5: hsl(190deg, 95%, 5%);
     --color-primary-64: hsl(190deg, 86%, 14%);
     --color-primary-87: hsl(190deg, 11%, 87%);
+    --color-primary-95: hsl(190deg, 6%, 95%);
 
     --color-accent-one-28: hsl(29deg, 76%, 28%);
 
