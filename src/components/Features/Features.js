@@ -27,7 +27,7 @@ const Wrapper = styled.section`
   @media ${QUERIES.mobileAndUp} {
     background: ${COLORS.Primary95};
     padding-top: 90px;
-    padding-bottom: 60px;
+    height: 650px;
   }
 `;
 

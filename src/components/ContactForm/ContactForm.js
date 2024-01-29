@@ -67,6 +67,8 @@ const Wrapper = styled(MaxWidthWrapper)`
   padding-bottom: 48px;
 
   text-align: center;
+
+  max-width: 600px;
 `;
 
 const Form = styled.form`

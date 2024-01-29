@@ -101,6 +101,7 @@ const List = styled(Tabs.List)`
 `;
 
 const Trigger = styled(Tabs.Trigger)`
+  background: transparent;
   border: none;
   border-bottom: 1px solid ${COLORS.Primary5};
   height: 60px;
