@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { COLORS } from '@/lib/constants';
+import { COLORS, QUERIES } from '@/lib/constants';
 
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Heading1 from '../Heading1';
