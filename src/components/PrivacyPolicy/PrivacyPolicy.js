@@ -108,10 +108,13 @@ const Wrapper = styled(MaxWidthWrapper)`
 
   padding-top: 24px;
   padding-bottom: 24px;
+  max-width: 700px;
+  text-align: center;
 `;
 
 const Text = styled.p`
   color: ${COLORS.Primary5};
+  text-align: start;
 `;
 
 export default PrivacyPolicy;
