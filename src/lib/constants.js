@@ -6,3 +6,15 @@ export const COLORS = {
   AccentOne28: 'var(--color-accent-one-28)',
   White: 'var(--color-white)',
 };
+
+const BREAKPOINTS = {
+  MOBILE: 600,
+  TABLET: 950,
+  LAPTOP: 1300,
+};
+
+export const QUERIES = {
+  mobileAndUp: `(min-width: ${BREAKPOINTS.MOBILE / 16}rem)`,
+  tabletAndUp: `(min-width: ${BREAKPOINTS.TABLET / 16}rem)`,
+  laptopAndUp: `(min-width: ${BREAKPOINTS.LAPTOP / 16}rem)`,
+};

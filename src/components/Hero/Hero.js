@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { COLORS } from '@/lib/constants';
+import { COLORS, QUERIES } from '@/lib/constants';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Heading1 from '../Heading1';
 import CTA from '../CTA';
@@ -37,16 +37,31 @@ const Wrapper = styled.section``;
 const InnerWrapper = styled(MaxWidthWrapper)`
   padding-top: 25px;
   padding-bottom: 74px;
+
+  @media ${QUERIES.mobileAndUp} {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 60px;
+
+    padding-top: 60px;
+  }
 `;
 
 const ImageWrapper = styled.div`
-  margin: 0 -24px;
+  @media ${QUERIES.mobileAndUp} {
+    margin: 0 -24px;
+  }
 `;
 
 const HeroImage = styled(Image)`
   width: 100%;
-  max-height: 550px;
+  max-height: 350px;
   height: auto;
+
+  @media ${QUERIES.mobileAndUp} {
+    max-height: 550px;
+  }
 `;
 
 const Content = styled.div`
@@ -54,6 +69,13 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${QUERIES.mobileAndUp} {
+    text-align: start;
+    align-items: flex-start;
+
+    max-width: 600px;
+  }
 `;
 
 const SubHeading = styled.p`
