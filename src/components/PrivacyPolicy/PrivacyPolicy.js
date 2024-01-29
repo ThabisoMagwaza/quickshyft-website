@@ -1,8 +1,9 @@
 'use client';
 import styled from 'styled-components';
+import { COLORS } from '@/lib/constants';
+
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Heading1 from '../Heading1';
-import { COLORS } from '@/lib/constants';
 
 function PrivacyPolicy() {
   return (
