@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { COLORS } from '@/lib/constants';
+import { COLORS, QUERIES } from '@/lib/constants';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import UnstyledLink from '../UnstyledLink';
 
@@ -55,12 +55,21 @@ const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media ${QUERIES.mobileAndUp} {
+    flex-direction: row;
+    gap: 32px;
+  }
 `;
 
 const NavLink = styled(Link)`
   text-decoration: none;
   color: ${COLORS.White};
   font-size: ${14 / 16}rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export default Footer;

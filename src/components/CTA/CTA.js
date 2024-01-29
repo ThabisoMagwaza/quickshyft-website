@@ -23,6 +23,10 @@ const Wrapper = styled.a`
   background: ${COLORS.Primary64};
 
   color: ${COLORS.White};
+
+  &:hover {
+    background: ${COLORS.Primary5};
+  }
 `;
 
 export default CTA;
